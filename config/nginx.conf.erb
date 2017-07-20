@@ -19,7 +19,7 @@ http {
 
   server {
     listen <%= ENV["PORT"] %>;
-    root <%= ENV["NGINX_ROOT"] || "www/data" %>;
+    root <%= ENV["NGINX_ROOT"] || "." %>;
 
     <% if ENV["NGINX_FORCE_SSL"] %>
       if ($http_x_forwarded_proto = "http") {
